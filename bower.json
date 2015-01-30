@@ -1,0 +1,16 @@
+{
+  "name": "jonymockup",
+  "private": true,
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.5.1",
+    "core-toolbar": "Polymer/core-toolbar#~0.5.1",
+    "paper-icon-button": "Polymer/paper-icon-button#~0.5.1",
+    "normalize.css": "~3.0.2",
+    "paper-menu-button": "Polymer/paper-menu-button#~0.5.1",
+    "paper-dropdown": "Polymer/paper-dropdown#~0.5.1",
+    "paper-item": "Polymer/paper-item#~0.5.1",
+    "core-menu": "Polymer/core-menu#~0.5.1",
+    "core-scroll-header-panel": "Polymer/core-scroll-header-panel#~0.5.1",
+    "core-animation": "Polymer/core-animation#~0.5.1"
+  }
+}
