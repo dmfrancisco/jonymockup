@@ -1,4 +1,4 @@
-![jonymockup](https://gc.david.tools/jonymockup.svg)
+![jonymockup](https://jonymockup.david.tools/logo.svg)
 
 #### Getting Started
 
