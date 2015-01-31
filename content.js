@@ -11,6 +11,12 @@ scope.download = "mockups/archive.zip";
 // * small: Additional information that will be displayed in the header
 // * name:  Name of the file (src will be `mockups/<name>.png`; you can change it in the index.html file)
 scope.items = [{
+  title: "Boilerplate screen",
+  small: "Hi!",
+  name:  "boilerplate.png"
+},{
+  title: "Login example",
+  name:  "example.png"
 }];
 
 // Start the website with the first image
