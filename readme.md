@@ -5,7 +5,7 @@
 * Put your mockups in the `mockups` folder and update the `content.js` file accordingly
 * Copy the files to your http server or start a new [local one](https://gist.github.com/willurd/5720255): `ruby -run -ehttpd . -p8080`
 
-That's it, visit [http://localhost:8080](http://localhost:8080)! For additional customization, check out the `index.html` and `theme.html` files.
+That's it, visit [http://localhost:8080](http://localhost:8080)! To customize it, check out the `index.html` and `theme.html` files.
 
 ---
 

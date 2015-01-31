@@ -1,0 +1,87 @@
+<!doctype html>
+<!--.....................................................
+.........................................................
+.......oOOOOo...............................oOOOOo.......
+......OOOOOOOO.............................OOOOOOOO......
+.....oOOOOOOOOo...........................oOOOOOOOOo.....
+......OOOOOOOO.............................OOOOOOOO......
+.......~OOOO~...............................~OOOO~.......
+.........................................................
+.........................................................
+.........................................................
+...............OOOOOOOOOOOOOOOOOOOOOOOOOOO...............
+...............8OOOOOOOOOOOOOOOOOOOOOOOOO8...............
+................OOOOOOOOOOOOOOOOOOOOOOOOO................
+.................OOOOOOOOOOOOOOOOOOOOOOO.................
+...................OOOOOOOOOOOOOOOOOOO...................
+.....................OOOOOOOOOOOOOOO.....................
+........................:OOOOOOOO:.......................
+..................................................Hi!....
+......................................................-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" href="//gc.david.tools/globe.ico">
+
+  <!-- For development, you can use: components/webcomponentsjs/webcomponents.min.js -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.5.1/webcomponents.min.js"></script>
+
+  <!-- For development, you can use: vendor.html -->
+  <link rel="import" href="vendor.min.html">
+  <link rel="import" href="theme.html">
+</head>
+<body unresolved>
+  <template is="auto-binding">
+    <core-scroll-header-panel>
+      <core-toolbar>
+        <paper-menu-button>
+          <paper-icon-button icon="menu"></paper-icon-button>
+
+          <paper-dropdown class="dropdown">
+            <core-menu class="menu">
+              <template repeat="{{ item in items }}">
+                <paper-item noink on-click="{{ selectItem }}">
+                  {{ item.title }}
+                </paper-item>
+              </template>
+            </core-menu>
+          </paper-dropdown>
+        </paper-menu-button>
+
+        <span flex>
+          {{ activeItem.title }}
+          <small>{{ activeItem.small }}</small>
+        </span>
+
+        <paper-menu-button>
+          <paper-icon-button icon="more-vert"></paper-icon-button>
+
+          <paper-dropdown class="dropdown" halign="right">
+            <core-menu class="menu">
+              <paper-item disabled>{{ title }}</paper-item>
+              <paper-item noink>
+                <core-icon icon="cloud-download"></core-icon>
+                <a href="{{ download }}">Download images</a>
+              </paper-item>
+            </core-menu>
+          </paper-dropdown>
+        </paper-menu-button>
+      </core-toolbar>
+
+      <img id="mockup" _src="mockups/{{ activeItem.name }}" />
+    </core-scroll-header-panel>
+  </template>
+
+  <script>
+    window.scope = document.querySelector('template[is=auto-binding]');
+
+    scope.selectItem = function(e, detail, sender, item) {
+      scope.activeItem = item || sender.templateInstance.model.item;
+      document.title = scope.activeItem.title;
+    };
+  </script>
+
+  <script src="content.js"></script>
+</body>
+</html>
