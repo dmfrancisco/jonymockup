@@ -83,5 +83,22 @@
   </script>
 
   <script src="content.js"></script>
+
+  <script>
+    // Start the website with the first image
+    scope.selectItem(null, null, null, scope.items[0]);
+
+    // Prefetch all images
+    try {
+      scope.items.forEach(function(item) {
+        var link = document.createElement("link");
+        link.setAttribute("rel", "prefetch");
+        link.setAttribute("href", "mockups/" + item.name);
+        document.getElementsByTagName("head")[0].appendChild(link);
+      });
+    } catch (error) {
+      // Nevermind, images won't be prefetched but still works
+    }
+  </script>
 </body>
 </html>

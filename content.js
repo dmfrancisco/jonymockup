@@ -18,6 +18,3 @@ scope.items = [{
   title: "Login example",
   name:  "example.png"
 }];
-
-// Start the website with the first image
-scope.selectItem(null, null, null, scope.items[0]);
