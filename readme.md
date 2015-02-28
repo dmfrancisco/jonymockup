@@ -38,6 +38,20 @@ I usually apply versioning to mockups following the pattern **Major.Minor.Fix**,
 
 It may seem redundant, but I also use git. This lets me document changes in a simple sentence. The content is then deployed using [Dokku](https://github.com/progrium/dokku) with a [static buildpack](https://github.com/florianheinemann/buildpack-nginx). I host all my mockups on [Digital Ocean](https://digitalocean.com), a simple and affordable cloud hosting solution. If you are interested and feeling generous, I would appreciate if you signed up using this [referral link](https://www.digitalocean.com/?refcode=7eb2969f7001). This will give you a $10 credit (and $25 to me :heart_eyes:).
 
+#### About high pixel density displays
+
+In this context, convenience is more important than bandwidth and performance. This tool assumes you prefer to export mockups in a single high resolution. If you are working on your vector graphics editor, and thinking in terms of "1280px" screens, it makes sense to export them with width 2560px. They will be displayed in the browser in their original size, unless the browser's viewport is smaller (in that case it will fill the entire width). You can manually change this behavior by setting the `width` property for each item, like this:
+
+```javascript
+scope.items = [{
+  title: "Example screen",
+  name:  "example.png",
+  width: 1280
+} …
+```
+
+This will make them look good in both low and high pixel density displays. You can always use SVG too (just make sure to convert your text to outlines, because some browsers render them differently).
+
 ---
 
 Licensed under the MIT license.

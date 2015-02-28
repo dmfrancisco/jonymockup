@@ -9,7 +9,7 @@ scope.download = "mockups/archive.zip";
 // List of screens to be displayed
 // * title: Text displayed in the menu
 // * small: Additional information that will be displayed in the header
-// * name:  Name of the file (src will be `mockups/<name>.png`; you can change it in the index.html file)
+// * name:  Name of the file (src will be `mockups/<name>`; you can change it in the index.html file)
 scope.items = [{
   title: "Boilerplate screen",
   small: "Hi!",
