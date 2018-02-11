@@ -1,5 +1,7 @@
 ![jonymockup](https://jonymockup.david.tools/logo.svg)
 
+**This project is deprecated. It used experimental browser features that have been removed.**
+
 A simple tool for sharing mockups. The code is pretty straightforward and is the result of some basic experiments with custom elements, shadow DOM and HTML imports. There's no build step or dynamic content. The `gh-pages` branch contains the same source that you can [preview here](https://dmfrancisco.github.io/jonymockup).
 
 #### Getting Started
