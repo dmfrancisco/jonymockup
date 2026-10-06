@@ -1,4 +1,4 @@
-![jonymockup](https://jonymockup.david.tools/logo.svg)
+![jonymockup](./logo.svg)
 
 **This project is deprecated. It used experimental browser features that have been removed.**
 
